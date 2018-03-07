@@ -1,0 +1,31 @@
+{
+  "name": "react-select-native",
+  "version": "0.0.1",
+  "description": "A React component for better usage of native HTML select element.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "html",
+    "select",
+    "standard",
+    "native"
+  ],
+  "devDependencies": {
+    "webpack-cli": "^2.0.10"
+  },
+  "author": "Jani Anttonen",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.6.0"
+  }
+}
