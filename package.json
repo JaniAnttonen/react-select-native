@@ -1,6 +1,6 @@
 {
   "name": "react-select-native",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A React component for better usage of native HTML select element.",
   "main": "build/index.js",
   "scripts": {
@@ -21,6 +21,11 @@
   },
   "author": "Jani Anttonen",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JaniAnttonen/react-select-native/issues",
+    "email": "janianttonen@gmail.com"
+  },
+  "repository": "github:JaniAnttonen/react-select-native",
   "dependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
