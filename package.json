@@ -17,7 +17,7 @@
     "native"
   ],
   "devDependencies": {
-    "webpack-cli": "^2.0.10"
+    "webpack-cli": "^2.1.5"
   },
   "author": "Jani Anttonen",
   "license": "MIT",
@@ -28,9 +28,9 @@
   "repository": "github:JaniAnttonen/react-select-native",
   "dependencies": {
     "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "webpack": "^3.6.0"
+    "webpack": "^3.12.0"
   }
 }
