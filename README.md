@@ -15,6 +15,8 @@ yarn add react-select-native
 - options – List of available options as objects with the fields label and value. Label is the text shown in the select field representing the value. Both label and value must be strings – if you're passing objects as input, JSON.stringify them on input and JSON.parse onChange
 - unselected - Optional additional value. Can be used to represent "select all" or similar things.
 - defaultValue – The default element that's selected from props.options. Must be exactly the same as one of the elements in props.options.
+- getRef - Passes the ref of the html select element back to the parent with a callback, so that the value of the selected option can be used passively.
+- id - Passes the given id to the html element, so that it can be given a ```<label>```
 
 ## Usage example
 ```javascript
