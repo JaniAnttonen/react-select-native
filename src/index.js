@@ -21,7 +21,9 @@ class Select extends Component {
   render() {
     return (
       <select
-        className={`react-select-native mobile-dropdown${this.props.className ? " " + this.props.className : ""}`}
+        className={`react-select-native mobile-dropdown${
+          this.props.className ? " " + this.props.className : ""
+        }`}
         id={this.props.id}
         ref={this.props.getRef}
         value={this.state.selected}

@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
+    "eslint-all": "./node_modules/eslint/bin/eslint.js --ext .js --ext .jsx ./src",
+    "eslint-all-fix": "./node_modules/eslint/bin/eslint.js --fix --ext .js --ext .jsx ./src",
+    "format": "./node_modules/prettier-eslint-cli/dist/index.js \"./src/**/*.jsx\" \"./src/**/*.js\" --write",
     "build": "webpack"
   },
   "keywords": [
@@ -17,6 +20,11 @@
     "native"
   ],
   "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.9.1",
+    "prettier": "^1.13.4",
+    "prettier-eslint": "^8.8.1",
+    "prettier-eslint-cli": "^4.7.1",
     "webpack-cli": "^2.1.5"
   },
   "author": "Jani Anttonen",
