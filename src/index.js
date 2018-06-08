@@ -8,15 +8,21 @@ class Select extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: this.props.defaultValue
+      selected: props.value || props.defaultValue
     };
   }
   handleChange(e) {
     e.preventDefault();
-    this.props.onChange(e);
+    this.props.onChange && this.props.onChange(e);
     this.setState({
       selected: e.target.value
     });
+  }
+  componentWillReceiveProps(props) {
+    props.value &&
+      this.setState({
+        selected: props.value
+      });
   }
   render() {
     return (
