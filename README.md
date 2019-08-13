@@ -28,20 +28,21 @@ yarn add react-select-native
 import Select from "react-select-native";
 ...
 render() {
+  const options = [
+          { label: "this is ebin", value: "ebin" },
+          { label: "label2", value: "this is ebin" }
+        ]
   return(
     <div>
       <Select
         onChange={e => this.handleChange(e)}
-        options={[
-          { label: "this is ebin", value: "ebin" },
-          { label: "label2", value: "this is ebin" }
-        ]}
+        options={options}
         unselected={{
           value: "empty",
           label: "pls select"
         }}
         value={this.state.selectValue}
-        defaultValue={{ label: "label" value: "value" }}
+        defaultValue={options[0].value}
       />
     </div>
  );
@@ -58,7 +59,7 @@ The native HTML select is very picky with its input, and can't take objects as-i
     options={listOfObjects.map(obj => (
       { label: obj.name, value: JSON.stringify(obj) }
     ))}
-    defaultValue={{ label: listOfObjects[0].name value: JSON.stringify(listOfObjects[0]) }}
+    defaultValue={ JSON.stringify(listOfObjects[0]) }
   />
 }
 ```

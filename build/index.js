@@ -66,96 +66,9 @@ module.exports =
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/**
- * VERY reusable React component.
- * Extends HTML select so that it can better handle asynchronically loaded data.
- */
-var Select = function (_Component) {
-  _inherits(Select, _Component);
-
-  function Select(props) {
-    _classCallCheck(this, Select);
-
-    var _this = _possibleConstructorReturn(this, (Select.__proto__ || Object.getPrototypeOf(Select)).call(this, props));
-
-    _this.state = {
-      selected: _this.props.defaultValue
-    };
-    return _this;
-  }
-
-  _createClass(Select, [{
-    key: "handleChange",
-    value: function handleChange(e) {
-      e.preventDefault();
-      this.props.onChange(e);
-      this.setState({
-        selected: e.target.value
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      return _react2.default.createElement(
-        "select",
-        {
-          className: "mobile-dropdown",
-          value: this.state.selected,
-          onChange: function onChange(e) {
-            return _this2.handleChange(e);
-          }
-        },
-        this.props.unselected && _react2.default.createElement(
-          "option",
-          { value: this.props.unselected.value },
-          this.props.unselected.label
-        ),
-        this.props.options && this.props.options.map(function (option, index) {
-          return _react2.default.createElement(
-            "option",
-            { key: "option" + index, value: option.value },
-            option.label
-          );
-        })
-      );
-    }
-  }]);
-
-  return Select;
-}(_react.Component);
-
-exports.default = Select;
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports) {
 
-module.exports = require("react");
+throw new Error("Module build failed: Error: Plugin/Preset files are not allowed to export objects, only functions. In /home/jani/dev/html/react-select-native/node_modules/babel-preset-es2015/lib/index.js\n    at createDescriptor (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/config-descriptors.js:178:11)\n    at items.map (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/config-descriptors.js:109:50)\n    at Array.map (<anonymous>)\n    at createDescriptors (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)\n    at createPresetDescriptors (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/config-descriptors.js:101:10)\n    at presets (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/config-descriptors.js:47:19)\n    at mergeChainOpts (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/config-chain.js:320:26)\n    at /home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/config-chain.js:283:7\n    at buildRootChain (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/config-chain.js:120:22)\n    at loadPrivatePartialConfig (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/partial.js:85:55)\n    at Object.loadPartialConfig (/home/jani/dev/html/react-select-native/node_modules/@babel/core/lib/config/partial.js:110:18)\n    at Object.<anonymous> (/home/jani/dev/html/react-select-native/node_modules/babel-loader/lib/index.js:140:26)\n    at Generator.next (<anonymous>)\n    at asyncGeneratorStep (/home/jani/dev/html/react-select-native/node_modules/babel-loader/lib/index.js:3:103)\n    at _next (/home/jani/dev/html/react-select-native/node_modules/babel-loader/lib/index.js:5:194)\n    at /home/jani/dev/html/react-select-native/node_modules/babel-loader/lib/index.js:5:364\n    at new Promise (<anonymous>)\n    at Object.<anonymous> (/home/jani/dev/html/react-select-native/node_modules/babel-loader/lib/index.js:5:97)\n    at Object._loader (/home/jani/dev/html/react-select-native/node_modules/babel-loader/lib/index.js:220:18)\n    at Object.loader (/home/jani/dev/html/react-select-native/node_modules/babel-loader/lib/index.js:56:18)\n    at Object.<anonymous> (/home/jani/dev/html/react-select-native/node_modules/babel-loader/lib/index.js:51:12)");
 
 /***/ })
 /******/ ]);
