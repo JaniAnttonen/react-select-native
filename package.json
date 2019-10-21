@@ -5,11 +5,11 @@
   "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
+    "start": "./node_modules/webpack/bin --watch",
     "eslint-all": "./node_modules/eslint/bin/eslint.js --ext .js --ext .jsx ./src",
     "eslint-all-fix": "./node_modules/eslint/bin/eslint.js --fix --ext .js --ext .jsx ./src",
     "format": "./node_modules/prettier-eslint-cli/dist/index.js \"./src/**/*.jsx\" \"./src/**/*.js\" --write",
-    "build": "webpack"
+    "build": "./node_modules/webpack/bin"
   },
   "keywords": [
     "react",
