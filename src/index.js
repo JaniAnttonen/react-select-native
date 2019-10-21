@@ -1,54 +1,33 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 
 /**
- * VERY reusable React component.
  * Extends HTML select so that it can better handle asynchronically loaded data.
  */
-class Select extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selected: props.value || props.defaultValue
-    };
-  }
-  handleChange(e) {
-    e.preventDefault();
-    this.props.onChange && this.props.onChange(e);
-    this.setState({
-      selected: e.target.value
-    });
-  }
-  componentWillReceiveProps(props) {
-    props.value &&
-      this.setState({
-        selected: props.value
-      });
-  }
-  render() {
-    return (
-      <select
-        className={`react-select-native mobile-dropdown${
-          this.props.className ? " " + this.props.className : ""
-        }`}
-        id={this.props.id}
-        ref={this.props.getRef}
-        value={this.state.selected}
-        onChange={e => this.handleChange(e)}
-      >
-        {this.props.unselected && (
-          <option value={this.props.unselected.value}>
-            {this.props.unselected.label}
+export default props => {
+  const [selected, setSelected] = useState(props.value || props.defaultValue);
+  return (
+    <select
+      className={`react-select-native mobile-dropdown${
+        props.className ? " " + props.className : ""
+      }`}
+      id={props.id}
+      ref={props.getRef}
+      value={selected}
+      onChange={e => {
+        e.preventDefault();
+        props.onChange && props.onChange(e);
+        setSelected(e.target.value);
+      }}
+    >
+      {props.unselected && (
+        <option value={props.unselected.value}>{props.unselected.label}</option>
+      )}
+      {props.options &&
+        props.options.map((option, index) => (
+          <option key={`option${index}`} value={option.value}>
+            {option.label}
           </option>
-        )}
-        {this.props.options &&
-          this.props.options.map((option, index) => (
-            <option key={`option${index}`} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-      </select>
-    );
-  }
-}
-
-export default Select;
+        ))}
+    </select>
+  );
+};
