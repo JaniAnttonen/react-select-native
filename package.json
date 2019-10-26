@@ -1,15 +1,23 @@
 {
   "name": "react-select-native",
-  "version": "0.1.4",
+  "version": "1.0.0",
   "description": "A React component for better usage of native HTML select element.",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
+    "test": "jest",
+    "start": "./node_modules/webpack/bin --watch",
     "eslint-all": "./node_modules/eslint/bin/eslint.js --ext .js --ext .jsx ./src",
     "eslint-all-fix": "./node_modules/eslint/bin/eslint.js --fix --ext .js --ext .jsx ./src",
     "format": "./node_modules/prettier-eslint-cli/dist/index.js \"./src/**/*.jsx\" \"./src/**/*.js\" --write",
-    "build": "webpack"
+    "build": "./node_modules/webpack/bin"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "keywords": [
     "react",
@@ -21,12 +29,21 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-cli": "^6.24.1",
     "babel-loader": "^8.0.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.9.1",
+    "jest": "^24.9.0",
     "prettier": "^1.13.4",
     "prettier-eslint": "^8.8.1",
     "prettier-eslint-cli": "^4.7.1",
+    "react-test-renderer": "^16.11.0",
+    "webpack": "^3.12.0",
     "webpack-cli": "^2.1.5"
   },
   "author": "Jani Anttonen",
@@ -37,10 +54,7 @@
   },
   "repository": "github:JaniAnttonen/react-select-native",
   "dependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "webpack": "^3.12.0"
+    "react": "^16.10.2",
+    "react-dom": "^16.11.0"
   }
 }
