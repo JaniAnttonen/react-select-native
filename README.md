@@ -1,4 +1,5 @@
 [![npm version](https://badge.fury.io/js/react-select-native.svg)](https://badge.fury.io/js/react-select-native)
+[![Build Status](https://travis-ci.org/JaniAnttonen/react-select-native.svg?branch=master)](https://travis-ci.org/JaniAnttonen/react-select-native)
 
 # react-select-native
 
