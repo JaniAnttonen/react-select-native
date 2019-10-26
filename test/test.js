@@ -1,6 +1,15 @@
 import React from "react";
 import Select from "../src/index.js";
 
+const fixtures = [
+  { value: "value1", label: "label1" },
+  { value: "value2", label: "label2" },
+  { value: "value3", label: "label3" },
+  { value: "value4", label: "label4" },
+  { value: "value5", label: "label5" },
+  { value: "value6", label: "label6" }
+];
+
 describe("Render", () => {
   it("with correct className", () => {
     const elem = shallow(<Select />);
@@ -14,12 +23,20 @@ describe("Render", () => {
     );
     expect(elem.text()).toEqual("ebin");
   });
-  /* it("with correct default item", () => {
-    const options = [{ value: "value1", label: "label1" }];
-    const elem = mount(
-      <Select unselected={{ value: "ebin", label: "ebin" }} options={options} />
+  it("with callback", () => {
+    const callback = jest.fn();
+    const testEvent = {
+      target: { value: fixtures[0].value },
+      preventDefault: () => {}
+    };
+    const elem = shallow(
+      <Select
+        unselected={{ value: "ebin", label: "ebin" }}
+        options={fixtures}
+        onChange={callback}
+      />
     );
-    elem.simulate("change", { target: { value: "value1" } });
-    expect(elem.text()).toEqual("label1");
-  }); */
+    elem.simulate("change", testEvent);
+    expect(callback).toBeCalledWith(testEvent);
+  });
 });

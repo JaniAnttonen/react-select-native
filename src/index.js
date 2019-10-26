@@ -24,7 +24,10 @@ export default props => {
       )}
       {props.options &&
         props.options.map((option, index) => (
-          <option key={`option${index}`} value={option.value}>
+          <option
+            key={`react-select-native-option${index}`}
+            value={option.value}
+          >
             {option.label}
           </option>
         ))}
