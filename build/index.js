@@ -105,7 +105,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
     value: props.unselected.value
   }, props.unselected.label), props.options && props.options.map(function (option, index) {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
-      key: "option".concat(index),
+      key: "react-select-native-option".concat(index),
       value: option.value
     }, option.label);
   }));
