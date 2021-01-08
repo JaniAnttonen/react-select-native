@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 /**
  * Extends HTML select so that it can better handle asynchronically loaded data.
